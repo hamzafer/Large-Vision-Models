@@ -1,3 +1,5 @@
+import time
+
 import requests
 import torch
 from PIL import Image
@@ -39,8 +41,16 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 inputs = processor(prompt, image, return_tensors="pt").to("cuda:0")
 
+# Measure inference time
+start_time = time.time()
+
 # Autoregressively complete prompt
 output = model.generate(**inputs, max_new_tokens=100)
 
+end_time = time.time()
+
 # Decode and print output
 print(processor.decode(output[0], skip_special_tokens=True))
+
+# Print the time taken for inference
+print(f"Inference Time: {end_time - start_time:.2f} seconds")
