@@ -1,10 +1,9 @@
 import time
 
-import request
+import requests
 import torch
 from PIL import Image
 from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration, BitsAndBytesConfig
-
 
 # Load processor
 processor = LlavaNextProcessor.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
