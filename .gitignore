@@ -1,4 +1,5 @@
 .idea
+external/
 
 # Video files
 *.mp4
