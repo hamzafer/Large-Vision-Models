@@ -1,5 +1,6 @@
 .idea
 external/
+big_vision_repo/
 
 # Video files
 *.mp4
