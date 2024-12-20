@@ -1,0 +1,21 @@
+digraph {
+	Start [label=Start shape=ellipse]
+	A [label="Literature review on
+the evolution of LVMs" shape=box]
+	B [label="State of the Art study" shape=box]
+	C [label="Learn about LVM architectures
+(ViT, ViViT, Auto-encoders)" shape=box]
+	D [label="Generalize LVMs for various tasks
+(Segmentation, Object Detection, Captioning)" shape=box]
+	E [label="Experiment on video datasets
+(UCF101, Kinetics 400)" shape=box]
+	F [label="Report findings, experiments, and results" shape=box]
+	End [label=End shape=ellipse]
+	Start -> A
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> End
+}
